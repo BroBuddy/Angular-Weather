@@ -1,0 +1,22 @@
+<h4>Saved profiles</h4>
+
+<div *ngFor="let profile of profiles">
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" (click)="onLoadProfile(profile)">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ profile.profileName }}</h5>
+        
+        <small><button type="button" class="btn btn-outline-danger btn-sm" (click)="onDeleteProfile($event, profile)">x</button></small>
+      </div>
+
+      <div *ngFor="let city of profile.cities">
+        <span class="badge badge-pill badge-success">{{ city }}</span>
+      </div>
+    </a>
+  </div>
+
+    
+  <hr />
+</div>
+
+<button class="btn btn-outline-success" type="submit" (click)="onSaveNew()">Save profile</button>

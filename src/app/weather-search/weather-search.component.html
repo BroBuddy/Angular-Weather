@@ -1,0 +1,15 @@
+<h4>City search</h4>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="input-group mb-3">
+    <input type="text"
+      [formControl]="location"
+      class="form-control"
+      id="location"
+      required />
+      
+    <div class="input-group-append">
+      <button class="btn btn-outline-success" type="submit">Add city</button>
+    </div>
+  </div>
+</form>
